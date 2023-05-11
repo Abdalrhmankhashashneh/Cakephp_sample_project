@@ -12,5 +12,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/login', ['controller' => 'Website', 'action' => 'login', 'login']);
 });
 Router::scope('/adminpanel', function (RouteBuilder $routes) {
-    $routes->connect('/', ['controller' => 'admin', 'action' => 'index', 'index']);
+    $routes->connect('/', ['controller' => 'admin', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'users', 'action' => 'index']);
+    $routes->connect('/login', ['controller' => 'admin', 'action' => 'login']);
+    $routes->connect('/logout', ['controller' => 'admin', 'action' => 'logout']);
 });

@@ -12,7 +12,9 @@
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);" >Add user</a></li>
+
+                                        <li>                            <button type="button" class="btn btn-default waves-effect m-r-20" data-toggle="modal" data-target="#largeModal" onclick="add_users_form()">Add user</button>
+</li>
 
                                     </ul>
                                 </li>
@@ -75,3 +77,4 @@
             </div>
             <!-- #END# Basic Examples -->
 </div>
+<?= $this->Html->script('../Admin/model_js/users.js') ?>

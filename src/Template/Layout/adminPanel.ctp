@@ -72,13 +72,15 @@
         <?= $this->element('Admin/left_sidebar') ?>
         <?= $this->element('Admin/right_sidebar') ?>
     </section>
-<?php endif; ?>
     <section class="content">
         <div class="container-fluid">
             <?= $this->fetch('content') ?>
         </div>
     </section>
-
+    <?= $this->element('Admin/models') ?>
+    <?php else: ?>
+    <?= $this->fetch('content') ?>
+    <?php endif; ?>
     <!-- Jquery Core Js -->
     <?= $this->Html->script('../Admin/plugins/jquery/jquery.min.js') ?>
 

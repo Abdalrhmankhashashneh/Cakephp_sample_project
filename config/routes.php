@@ -16,6 +16,7 @@ Router::scope('/adminpanel', function (RouteBuilder $routes) {
     $routes->scope('/users', function ($routes){
        $routes->connect('/',['controller' => 'users', 'action' => 'index']);
        $routes->connect('/edit_user_form/*',['controller' => 'users', 'action' => 'editUserForm']);
+       $routes->connect('/add_users_form',['controller' => 'users', 'action' => 'addUserForm']);
        $routes->connect('/add',['controller' => 'users', 'action' => 'add']);
     });
     $routes->connect('/login', ['controller' => 'admin', 'action' => 'login']);

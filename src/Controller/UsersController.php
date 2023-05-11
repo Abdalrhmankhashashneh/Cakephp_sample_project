@@ -26,8 +26,9 @@ class UsersController extends AdminController
 
         $this->set('user', $user);
     }
-    public function add_user_form(){
-        return $this->render('../Admin/Users/add');
+    public function addUserForm(){
+        $this->viewBuilder()->setLayout('models');
+        return $this->render('../Admin/Users/ajax/add_user_form');
     }
 
     public function add_user()
@@ -46,7 +47,8 @@ class UsersController extends AdminController
     }
 
     public function editUserForm($user_id){
-        dd($user_id);
+        $this->viewBuilder()->setLayout('models');
+        $this->render('../Admin/Users/ajax/edit_user_form');
     }
     public function edit_user($id = null)
     {

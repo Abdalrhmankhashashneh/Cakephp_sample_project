@@ -3,7 +3,7 @@
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <?= $this->Html->image('user.png', ['width' => '48', 'height' => '48', 'alt' => 'User']) ?>
+                    <?= $this->Html->image('../Admin/images/user.png', ['width' => '48', 'height' => '48', 'alt' => 'User']) ?>
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $loggedInUser['first_name'] ?><?= $loggedInUser['last_name'] ?></div>
@@ -11,9 +11,7 @@
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-
-                            <li role="seperator" class="divider"></li>
-                            <li><a href="adminpanel/logout"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="/adminpanel/logout"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>

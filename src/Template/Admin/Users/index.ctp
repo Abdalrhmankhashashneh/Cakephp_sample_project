@@ -1,0 +1,77 @@
+ <!-- Basic Examples -->
+ <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                            Users List
+                        </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);" >Add user</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Username</th>
+                                            <th>email</th>
+                                            <th>phone</th>
+                                            <th>Created At</th>
+                                            <th>Updated At</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Username</th>
+                                            <th>email</th>
+                                            <th>phone</th>
+                                            <th>Created At</th>
+                                            <th>Updated At</th>
+                                            <th>Actions</th>
+                                        </tr>
+
+                                    </tfoot>
+                                    <tbody>
+                                    <?php foreach ($users as $user): ?>
+
+                                        <tr>
+                                            <td><?= $user->first_name ?> <?= $user->last_name ?></td>
+                                            <td><?= $user->username ?></td>
+                                            <td><?= $user->email ?></td>
+                                            <td><?= $user->phone ?></td>
+                                            <td><?= $user->created_at ?></td>
+                                            <td><?= $user->updated_at ?></td>
+                                            <td><?= $this->Html->link('edit' ,"adminpanel/users/edit_user_form/$user->id" )?></td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                                <div class="paginator">
+    <ul class="pagination">
+        <!-- Use the Paginator Helper to generate pagination links -->
+        <?= $this->Paginator->prev('<< ' . __('previous')) ?>
+        <?= $this->Paginator->numbers() ?>
+        <?= $this->Paginator->next(__('next') . ' >>') ?>
+    </ul>
+    <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Basic Examples -->
+</div>

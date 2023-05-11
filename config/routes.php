@@ -13,7 +13,11 @@ Router::scope('/', function (RouteBuilder $routes) {
 });
 Router::scope('/adminpanel', function (RouteBuilder $routes) {
     $routes->connect('/', ['controller' => 'admin', 'action' => 'index']);
-    $routes->connect('/', ['controller' => 'users', 'action' => 'index']);
+    $routes->scope('/users', function ($routes){
+       $routes->connect('/',['controller' => 'users', 'action' => 'index']);
+       $routes->connect('/edit_user_form/*',['controller' => 'users', 'action' => 'editUserForm']);
+       $routes->connect('/add',['controller' => 'users', 'action' => 'add']);
+    });
     $routes->connect('/login', ['controller' => 'admin', 'action' => 'login']);
     $routes->connect('/logout', ['controller' => 'admin', 'action' => 'logout']);
 });

@@ -9,6 +9,7 @@ class AdminController extends AppController
     public function initialize()
     {
         $this->viewBuilder()->setLayout('adminPanel');
+        $this->loadComponent('Paginator');
 $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
             'loginAction' => [

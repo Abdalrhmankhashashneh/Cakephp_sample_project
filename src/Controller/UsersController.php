@@ -7,9 +7,15 @@ class UsersController extends AdminController
 {
     public function index()
     {
+        $this->paginate = [
+            'limit' => 10,
+            'order' => ['created' => 'desc'],
+            // Add conditions or joins if needed
+        ];
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
+        $this->render('../Admin/Users/index');
     }
 
     public function view($id = null)
@@ -20,9 +26,11 @@ class UsersController extends AdminController
 
         $this->set('user', $user);
     }
+    public function add_user_form(){
+        return $this->render('../Admin/Users/add');
+    }
 
-
-    public function add()
+    public function add_user()
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
@@ -37,7 +45,10 @@ class UsersController extends AdminController
         $this->set(compact('user'));
     }
 
-    public function edit($id = null)
+    public function editUserForm($user_id){
+        dd($user_id);
+    }
+    public function edit_user($id = null)
     {
         $user = $this->Users->get($id, [
             'contain' => [],

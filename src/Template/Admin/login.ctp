@@ -3,13 +3,13 @@
 <section class="login-page">
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);">Admin<b>BSB</b></a>
-            <small>Admin BootStrap Based - Material Design</small>
+            <a href="javascript:void(0);">Sample<b>CAKE</b></a>
+            <small>Admin login</small>
         </div>
         <div class="card">
             <div class="body">
                 <form id="sign_in" method="POST" action="/adminpanel/login">
-                    <div class="msg">Sign in to start your session</div>
+                    <div class="msg">Please enter your email and password to login</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>

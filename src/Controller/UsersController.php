@@ -33,6 +33,7 @@ class UsersController extends AdminController
 
     public function add_user()
     {
+        dd($this->request->getData());
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());

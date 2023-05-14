@@ -20,6 +20,12 @@
                                         <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Enter user last name">
                                     </div>
                                 </div>
+                                <label for="email">email</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter user email">
+                                    </div>
+                                </div>
                                 <label for="username">username</label>
                                 <div class="form-group">
                                     <div class="form-line">

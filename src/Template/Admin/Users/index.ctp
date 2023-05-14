@@ -13,7 +13,7 @@
                                     </a>
                                     <ul class="dropdown-menu pull-right">
 
-                                        <li>                            <button type="button" class="btn btn-default waves-effect m-r-20" data-toggle="modal" data-target="#largeModal" onclick="add_users_form()">Add user</button>
+                                        <li>                            <button type="button" class="btn btn-default waves-effect" data-toggle="modal" data-target="#largeModal" onclick="add_users_form()">Add user</button>
 </li>
 
                                     </ul>
@@ -56,7 +56,7 @@
                                             <td><?= $user->phone ?></td>
                                             <td><?= $user->created_at ?></td>
                                             <td><?= $user->updated_at ?></td>
-                                            <td><?= $this->Html->link('edit' ,"adminpanel/users/edit_user_form/$user->id" )?></td>
+                                            <td><a class="btn btnbtn btn-success waves-effect" data-toggle="modal" data-target="#largeModal" onclick="edit_user_form(<?= $user->id ?>)"> Edit </a></td>
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>

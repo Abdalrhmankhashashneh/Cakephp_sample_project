@@ -65,10 +65,7 @@ class UsersTable extends Table
             ->dateTime('created_at')
             ->notEmptyDateTime('created_at');
 
-        $validator
-            ->dateTime('updated_at')
-            ->requirePresence('updated_at', 'create')
-            ->notEmptyDateTime('updated_at');
+
 
         return $validator;
     }

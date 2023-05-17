@@ -33,7 +33,7 @@ class PostsTable extends Table
         parent::initialize($config);
 
         $this->setTable('posts');
-        $this->setDisplayField('id');
+        $this->setDisplayField('post_title');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Users', [
